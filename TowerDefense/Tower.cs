@@ -4,12 +4,14 @@ namespace TowerDefense
     public class Tower
     {
         private const int _range = 1;
-        private const int _power = 1;
+        private int _power = 1;
         private const double _accuracy = .75;
 
         private static readonly Random _random = new Random();
 
         private readonly MapLocation _location;
+
+        public int Power { get => _power; set => _power = value; }
 
         public bool IsSuccessfulShot()
         {
@@ -29,7 +31,7 @@ namespace TowerDefense
                 {
                     if (IsSuccessfulShot())
                     {
-                        invader.DecreaseHealth(_power);
+                        invader.DecreaseHealth(Power);
                         Console.WriteLine("Shot at and hit an invader!");
                         if (invader.IsNeutralized)
                         {

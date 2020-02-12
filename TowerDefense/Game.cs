@@ -7,6 +7,8 @@ namespace TowerDefense
         static void Main(string[] args)
         {
             Map map = new Map(8, 5);
+            Random _random = new Random();
+            int numberOfInvaders = _random.Next(1, 4);
 
             try
             {
@@ -23,26 +25,25 @@ namespace TowerDefense
                     }
                 );
 
-                Invader[] invaders =
+                Invader[] invaders = new Invader[numberOfInvaders];
+
+                for (int i = 0; i < numberOfInvaders; i++)
                 {
-                    new Invader(path),
-                    new Invader(path),
-                    new Invader(path),
-                    new Invader(path)
-                };
+                    invaders[i] = new Invader(path);
+                }
 
                 Tower[] towers = {
-                    new Tower(new MapLocation(1, 3, map)),
+                    new StrongTower(new MapLocation(1, 3, map)),
                     new Tower(new MapLocation(3, 3, map)),
                     new Tower(new MapLocation(5, 3, map))
                 };
 
-                Level leve1 = new Level(invaders)
+                Level level = new Level(invaders)
                 {
                     Towers = towers
                 };
 
-                bool playerWon = leve1.Play();
+                bool playerWon = level.Play();
 
                 Console.WriteLine("Player " + (playerWon ? "won" : "lost"));
             }

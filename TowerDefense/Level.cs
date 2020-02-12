@@ -24,6 +24,7 @@ namespace TowerDefense
                 foreach (Tower tower in Towers)
                 {
                     tower.FireOnInvaders(_invaders);
+                    Console.WriteLine("Tower type firing: " + tower.GetType());
                 }
 
                 // Count and move the invaders that are still active.
