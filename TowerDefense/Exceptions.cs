@@ -1,9 +1,24 @@
 ﻿using System;
 namespace TowerDefense
 {
-    public class Exceptions
+    public class DefenseException : System.Exception
     {
-        public Exceptions()
+        public DefenseException()
+        {
+        }
+
+        public DefenseException(string message) : base(message)
+        {
+        }
+    }
+
+    public class OutOfBoundsException : DefenseException
+    {
+        public OutOfBoundsException()
+        {
+        }
+
+        public OutOfBoundsException(string message) : base(message)
         {
         }
     }

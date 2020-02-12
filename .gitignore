@@ -10,3 +10,9 @@
 *.cache
 *.props
 *.targets
+TowerDefense/bin/Debug/netcoreapp3.0/TowerDefense
+*.dll
+*.pdb
+TowerDefense/obj/Debug/netcoreapp3.0/TowerDefense
+TowerDefense/obj/Debug/netcoreapp3.0/TowerDefense.csproj.FileListAbsolute.txt
+TowerDefense/obj/Debug/netcoreapp3.0/TowerDefense.AssemblyInfo.cs
