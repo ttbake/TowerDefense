@@ -1,0 +1,12 @@
+
+.DS_Store
+*.json
+*.lock
+*.ide
+*.ide-shm
+*.ide-wal
+*.xml
+*.sln
+*.cache
+*.props
+*.targets
