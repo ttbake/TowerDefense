@@ -3,12 +3,10 @@ namespace TowerDefense
 {
     public class StrongTower : Tower
     {
-        private readonly MapLocation _location;
+        protected override int Power { get; } = 2;
 
         public StrongTower(MapLocation location) : base(location)
         {
-            _location = location;
-            Power = 2;
         }
     }
 }
